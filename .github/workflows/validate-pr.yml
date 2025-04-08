@@ -1,0 +1,14 @@
+name: Validate PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call PR Validation Endpoint
+        run: |
+          curl -X GET "https://5351-217-111-217-82.ngrok-free.app/api/pr/analyze?prUrl=@${{ github.event.pull_request.html_url }}"
