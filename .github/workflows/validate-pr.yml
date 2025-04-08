@@ -13,7 +13,6 @@ jobs:
         id: pr_validation
         run: |
           response=$(curl -X GET "https://5351-217-111-217-82.ngrok-free.app/api/pr/analyze?prUrl=@${{ github.event.pull_request.html_url }}")
-          echo "Response: $response"
           valid=$(echo "$response" | jq '.pr.valid')
           aiReview=$(echo "$response" | jq -r '.pr.aiReview')
 
