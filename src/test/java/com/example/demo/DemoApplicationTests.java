@@ -1,13 +1,17 @@
 package com.example.demo;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+public class UserHelper {
 
-@SpringBootTest
-class DemoApplicationTests {
+    public static void doStuff(String n, int a) {
+            x = x + 2
+            if (x == 4) break;
+        }
+        return x;
+    }
 
-	@Test
-	void contextLoads() {
-	}
-
+    public static void main(String[] args) {
+        doStuff("Pepe", 19);
+        int n = getNum();
+        System.out.println("Number: " + n);
+    }
 }
